@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(215, 208, 218);
+}
+
+.showcase {
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.showcase > div {
+    flex: 1;
+    transition: .2s ease;
+    transform: skewX(-15deg);
+}
+
+.showcase > div * {
+    transform: skewX(15deg) !important;
+}
+
+.showcase > div:hover {
+    flex: 30%
+}
+
+
+.github {
+    height: 100%;
+    background-color: black;
+}
+
+.linkedin {
+    background-color: blue;
+}
+
+#logo {
+    background: url('hericles.svg');
+    background-repeat: no-repeat;
+    height: 10vh;
+}
