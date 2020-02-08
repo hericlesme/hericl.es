@@ -1,58 +1,86 @@
-@import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap');
 
 #root, .App, body, .background {
-  height: 100vh;
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Arvo', serif;
+  min-height: 100vh;
 }
 
 
 .App {
   text-align: center;
+  background-color: #1a1a1a;
 }
 
-.image {
-  /* background: url('assets/background.jpg'); */
-  background: rgb(32, 32, 32);
-  height: 60vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 0px 0px 0px 50px;
-  filter: grayscale(0.4);
-}
-
-.background {
-  background-color: rgb(230, 227, 211);
-}
-
-
-.cards::-webkit-scrollbar {
-  display: none;
-}
-
-.cards {
-  display: flex;
-  position: absolute;
-  top: 45vh;
-  width: 100vw;
-  overflow: scroll;
-  -ms-overflow-style: none;
-}
-
-.card:nth-child(1) { 
-  margin-left: 20vw !important;
-}
-
-.card {
+.header {
+  padding: 10vh 10vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  background: white;
-  padding: 15px 50px;
-  margin: 20px;
-  height: 200px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  box-shadow: #00000033 0 5px 10px;
+  align-items: flex-start;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+  margin-bottom: 25px;
+}
+
+p.title {
+  color: #1a1a1a;
+  background-color: white;
+  display: inline-block;
+}
+
+.headline {
+  text-align: left;
+}
+
+p {
+  font-size: 3rem;
+  color: white;
+  text-align: left;
+}
+
+.headline p {
+  margin: 0;
+}
+
+svg {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  fill: white;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10vw 5vh 10vw;
+}
+
+.links > a {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75px;
+  width: 75px;
+  background-color: #111111;
+  color: white;
+}
+
+.links > a:hover {
+  background-color: white;
+  -moz-box-shadow:    none;
+  -webkit-box-shadow: none;
+  box-shadow:         none;
+  color: black;  
+}
+
+.links > a:hover svg{
+  fill: black;
+}
+
+.links > a, svg {
+  transition: .2s;
 }
