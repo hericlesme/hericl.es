@@ -24,23 +24,26 @@ img {
   margin-bottom: 25px;
 }
 
-p.title {
+h1.title {
   color: #1a1a1a;
   background-color: white;
   display: inline-block;
+  font-size: 3rem;
+  font-weight: normal;
 }
 
 .headline {
   text-align: left;
 }
 
-p {
+h2 {
   font-size: 3rem;
   color: white;
   text-align: left;
+  font-weight: normal;
 }
 
-.headline p {
+.headline h2 {
   margin: 0;
 }
 
@@ -54,19 +57,29 @@ svg {
 
 .links {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0 10vw 5vh 10vw;
+  flex-wrap: wrap;
 }
 
 .links > a {
+  text-decoration: none;
+  /* margin: 10px 25px 10px 0; */
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 0;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 75px;
   width: 75px;
-  background-color: #111111;
+  /* background-color: #111111;  */
   color: white;
+}
+
+.about {
+  padding: 2vh 10vw;
 }
 
 .links > a:hover {
@@ -83,4 +96,63 @@ svg {
 
 .links > a, svg {
   transition: .2s;
+}
+
+p {
+  color: white;
+  text-align: left;
+  font-size: 1.25rem !important;
+}
+
+@media (max-width: 599px) {
+  h1, h2 {
+    font-size: 1.75rem;
+  }
+
+  .links > a {
+    height: 60px;
+    width: 60px;
+  }
+
+  .links {
+    justify-content: space-between;
+  }
+}
+
+
+@media (min-width: 500px) {
+  .links {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 720px) {
+  .links {
+    justify-content: space-;
+  }
+}
+
+footer {
+  margin-top: 10vh;
+  padding: 10px 10vw;
+  background: rgb(46, 46, 46);
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding: 10vh 20vw;
+  }
+  
+  .links {
+    padding: 0 20vw 5vh 20vw;
+  }
+
+  .about {
+    padding: 2vh 20vw;
+  }
+
+  footer {
+    padding: 10px 20vw;
+  }
 }
