@@ -19,7 +19,7 @@ function App() {
         <div className="headline">
           <h1 className="title">Hello! I'm Héricles.</h1>
           <h2>
-            A curious software enginner trying to build the future I want to live.
+            A curious software engineer trying to build the future I want to live.
           </h2>
         </div>
       </div>
